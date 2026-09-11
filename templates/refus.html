@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block titre %}Accès refusé{% endblock %}
+{% block largeur %}narrow{% endblock %}
+{% block contenu %}
+<div class="card">
+  <h1>Accès refusé</h1>
+  <p class="lede">Cette page est réservée à l'équipe administrateur.</p>
+  <p>Rôle détecté : <span class="badge role">{{ role }}</span></p>
+  <p class="links"><a href="/">Retour à l'accueil</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titre %}Facture n°{{ numero }}{% endblock %}
+{% block contenu %}
+{% if facture %}
+<div class="invoice">
+  <div class="head">
+    <div><strong>Meridian Corp</strong><br><span class="n">Facture n°{{ numero }}</span></div>
+    <div style="text-align:right"><span class="n">Client</span><br><strong>{{ facture.client }}</strong></div>
+  </div>
+  <div class="body">
+    <div class="row"><span class="k">Objet</span><span class="v">{{ facture.detail }}</span></div>
+    <div class="row"><span class="k">Montant TTC</span><span class="v">{{ facture.montant }}</span></div>
+    <div class="row" style="border:none"><span class="k">Statut</span><span class="v">En attente de règlement</span></div>
+  </div>
+</div>
+<p class="links"><a href="/facture/{{ numero }}/pdf">Télécharger en PDF</a></p>
+{% else %}
+<div class="card"><h1>Facture introuvable</h1><p class="lede">Aucune facture ne porte le numéro {{ numero }}.</p></div>
+{% endif %}
+<p class="links"><a href="/facture/42">← Retour à mes factures</a></p>
+{% endblock %}

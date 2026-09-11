@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titre %}Meridian{% endblock %} · Meridian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="brand"><span class="mark"></span> Meridian</div>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/facture/42">Mes factures</a>
+      <a href="/register">Créer un compte</a>
+      <a href="/login">Connexion</a>
+      <a href="/admin/console">Espace admin</a>
+    </nav>
+  </header>
+  <main class="{% block largeur %}{% endblock %}">
+    {% block contenu %}{% endblock %}
+  </main>
+  <footer class="site">Meridian Corp · portail de facturation client · build 1.4.2</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

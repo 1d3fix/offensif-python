@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titre %}Connexion{% endblock %}
+{% block largeur %}narrow{% endblock %}
+{% block contenu %}
+<div class="card">
+  <h1>Connexion</h1>
+  <p class="lede">Accédez à votre espace client Meridian.</p>
+  <form method="post" action="/login">
+    <label for="username">Identifiant</label>
+    <input type="text" id="username" name="username" autocomplete="username" required>
+    <label for="password">Mot de passe</label>
+    <input type="password" id="password" name="password" autocomplete="current-password" required>
+    <button type="submit">Se connecter</button>
+  </form>
+  {% if message %}<div class="message">{{ message }}</div>{% endif %}
+  {% if flag %}<div class="flag">Accès administrateur confirmé — {{ flag }}</div>{% endif %}
+  <p class="links"><a href="/register">Créer un compte</a> · <a href="/">Retour à l'accueil</a></p>
+</div>
+{% endblock %}

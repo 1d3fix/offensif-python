@@ -1,0 +1,7 @@
+-- Export automatique quotidien - genere par cron a 03:00 - NE PAS PARTAGER
+-- Base : utilisateurs
+
+INSERT INTO utilisateurs VALUES ('admin','letmein','admin','admin@meridian.corp','compte principal');
+INSERT INTO utilisateurs VALUES ('demo','demo','user','demo@meridian.corp','compte de demonstration');
+
+-- fin export

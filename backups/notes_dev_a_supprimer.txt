@@ -1,0 +1,8 @@
+A FAIRE avant la mise en prod (urgent, on l'a note trois fois deja) :
+- retirer ce dossier /backups/ du serveur web, il ne doit jamais etre expose
+- couper le listing de repertoire cote serveur
+- l'export SQL a cote contient les comptes en clair, ne pas laisser trainer
+
+Pense-bete (ancien FTP, mot de passe change depuis) : ftp_meridian_2019!
+
+Flag pour le lab : MERIDIAN{sauvegarde_oubliee_en_ligne}

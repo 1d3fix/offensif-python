@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block titre %}Accueil{% endblock %}
+{% block contenu %}
+<section class="hero">
+  <div>
+    <h1>Vos factures, au même endroit</h1>
+    <p class="lede">Consultez, téléchargez et réglez vos factures Meridian.
+       Un espace unique pour votre entreprise et votre comptabilité.</p>
+    <p class="links"><a href="/facture/42">Voir mes factures</a> · <a href="/login">Accéder à mon espace</a></p>
+  </div>
+  <div class="amount-card">
+    <div class="label">Solde à régler</div>
+    <div class="amount">90,00&nbsp;€</div>
+    <div class="due">Échéance le 30/09</div>
+  </div>
+</section>
+
+<div class="grid">
+  <div class="feature"><h3>Historique complet</h3><p>Toutes vos factures depuis l'ouverture de votre compte.</p></div>
+  <div class="feature"><h3>Paiement en ligne</h3><p>Réglez en quelques clics, reçu immédiat.</p></div>
+  <div class="feature"><h3>Espace comptable</h3><p>Exportez vos documents pour votre expert-comptable.</p></div>
+</div>
+
+<!-- ===================================================== -->
+<!-- NOTE EQUIPE DEV (a nettoyer avant la prod) :          -->
+<!--  - /debug encore active, a retirer !                  -->
+<!--  - cle API interne : voir /static/app.js              -->
+<!--  - factures accessibles par /facture/<numero>         -->
+<!--  - espace admin protege par un simple cookie 'role'   -->
+<!-- ===================================================== -->
+{% endblock %}

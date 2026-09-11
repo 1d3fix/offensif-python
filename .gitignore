@@ -1,0 +1,13 @@
+# fichiers generes a l'execution (ne pas versionner)
+lab.db
+acces.log
+__pycache__/
+venv/
+env/
+*.pyc
+
+# corrige / a ne jamais publier avec le sujet
+FICHE_PROF_lab.md
+
+# wordlist volumineuse : a telecharger par l'etudiant, cf SUJET.md
+darkc0de.txt

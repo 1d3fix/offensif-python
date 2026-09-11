@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index of {{ chemin }}</title>
+<style>
+  body{ font-family:"Courier New",monospace; background:#fff; color:#000; padding:22px; font-size:14px; }
+  h1{ font-size:19px; font-weight:normal; border-bottom:1px solid #999; padding-bottom:8px; margin-bottom:10px; }
+  table{ border-collapse:collapse; }
+  td{ padding:2px 24px 2px 0; }
+  a{ color:#0000ee; text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  hr{ border:none; border-top:1px solid #999; margin-top:14px; }
+</style>
+</head>
+<body>
+<h1>Index of {{ chemin }}</h1>
+<table>
+<tr><td><a href="/">../</a></td><td></td><td></td></tr>
+{% for f in fichiers %}
+<tr><td><a href="{{ f.nom }}">{{ f.nom }}</a></td><td>{{ f.modifie }}</td><td>{{ f.taille }}</td></tr>
+{% endfor %}
+</table>
+<hr>
+</body>
+</html>
